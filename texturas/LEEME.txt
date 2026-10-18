@@ -1,0 +1,3 @@
+Imagenes de textura del escenario El Japon.
+Materiales_El_Japon.blend contiene los materiales y texturas procedurales editables (Append > Material).
+Cajon: ladrillo de IMG_4336, UV en laterales, tapa oscura independiente.

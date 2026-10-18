@@ -1,0 +1,26 @@
+{
+  "fps": 30,
+  "end": 1800,
+  "audio_codec": "AAC",
+  "video_format": "FFMPEG",
+  "strips": [
+    [
+      "AUDIO | Boom bap original 88 BPM",
+      1,
+      1801,
+      "//..\\audio\\01_BoomBap_88BPM_60s.wav"
+    ],
+    [
+      "AUDIO | Ruedas sobre concreto",
+      1,
+      1801,
+      "//..\\audio\\02_Ruedas_sincronizadas_60s.wav"
+    ],
+    [
+      "AUDIO | Pop slide flip aterrizajes",
+      1,
+      1801,
+      "//..\\audio\\03_Trucos_sincronizados_60s.wav"
+    ]
+  ]
+}

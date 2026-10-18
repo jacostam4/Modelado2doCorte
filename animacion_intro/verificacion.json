@@ -1,0 +1,6 @@
+{
+  "frames": 240,
+  "fps": 30,
+  "encuadre_completo_todos_frames": true,
+  "movimiento": "curva continua smoothstep"
+}

@@ -1,0 +1,60 @@
+{
+  "sample_rate": 48000,
+  "duration_seconds": 60,
+  "bpm": 88,
+  "peak_dbfs": -5.664156946837318,
+  "rms_dbfs": -23.537500275778868,
+  "events": [
+    {
+      "effect": "nollie_pop_nose",
+      "frame": 1345,
+      "seconds": 44.8
+    },
+    {
+      "effect": "lipslide_contacto",
+      "frame": 1363,
+      "seconds": 45.4
+    },
+    {
+      "effect": "lipslide_deslizamiento",
+      "frame": 1363,
+      "seconds": 45.4
+    },
+    {
+      "effect": "lipslide_salida",
+      "frame": 1392,
+      "seconds": 46.3667
+    },
+    {
+      "effect": "lipslide_aterrizaje",
+      "frame": 1410,
+      "seconds": 46.9667
+    },
+    {
+      "effect": "kickflip_pop_tail",
+      "frame": 1549,
+      "seconds": 51.6
+    },
+    {
+      "effect": "kickflip_flick",
+      "frame": 1555,
+      "seconds": 51.8
+    },
+    {
+      "effect": "kickflip_giro",
+      "frame": 1555,
+      "seconds": 51.8
+    },
+    {
+      "effect": "kickflip_catch",
+      "frame": 1574,
+      "seconds": 52.4333
+    },
+    {
+      "effect": "kickflip_aterrizaje",
+      "frame": 1583,
+      "seconds": 52.7333
+    }
+  ],
+  "source": "Original procedural synthesis; no external samples."
+}
