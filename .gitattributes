@@ -1,0 +1,4 @@
+# Preserve the historical script bytes recorded in docs/manifest.json.
+*.py -text
+*.md text eol=lf
+*.json text eol=lf

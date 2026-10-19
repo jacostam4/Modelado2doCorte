@@ -1,0 +1,1319 @@
+{
+  "source_thread": "01a0ff77-9e08-75f3-a527-d835f984a346",
+  "scripts": [
+    {
+      "path": "Skatepark_El_Japon/scripts/agregar_objetos_escenario.py",
+      "description": "Integra la colección del skate y objetos mug/muñeco de nieve desde archivos blend existentes.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "CAJON FS 50-50 | tapa",
+        "Caseta del parque"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\tabla\\STYX_Skate_Armado.blend",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\universidad\\MUÑECO DE NIEVE.blend"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "d53b96f45854f2e2cffba2321106d685335836454f02fe5f13c1f553464fb88d",
+      "functions": [
+        "bounds",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/ajustar_cierre_piso.py",
+      "description": "Ajuste específico conservado del proceso: ajustar cierre piso. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "mathutils"
+      ],
+      "objects": [
+        "CAM FINAL | Kickflip y piso"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "d12d6cf19a55aeef909ace6f624fe4aa60492aacc873b9566cf48daab27aea6c",
+      "functions": [
+        "done"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/ajustar_detalle_caseta.py",
+      "description": "Ajuste específico conservado del proceso: ajustar detalle caseta. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "CAM 02 | Mural y quarters",
+        "CAM 03 | Cajones y barandas",
+        "CAM 04 | Planta",
+        "Cajon inclinado paralelo a bank",
+        "Caseta del parque"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "06b8ef85b6393f92e20de7304ad2727d8e0fd3ec094a94c20299b4b27f080a9b",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/alargar_obstaculos_piso.py",
+      "description": "Ajuste específico conservado del proceso: alargar obstaculos piso. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "BARANDA BAJA | BS-FS boardslide",
+        "CAJON FS 50-50 | cuerpo"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "415e81dc3a2af624662527e5349aa201880e640c918973fd0f379d51c64eb622",
+      "functions": [
+        "axis_center",
+        "length",
+        "stretch",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/animar_kickflip.py",
+      "description": "Anima salto, giro longitudinal completo de la tabla, postura del personaje, ruedas y cámara.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Armature",
+        "BARANDA BAJA | BS-FS boardslide",
+        "CAM TRUCO | Nollie BS Lipslide",
+        "SKATE | control general"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "54dcee9ae26537ee13987cb1ae6f0e5d3e2b2ee3a036092dc43364dcc87cffd9",
+      "functions": [
+        "smooth",
+        "mixvalue",
+        "aim",
+        "ik",
+        "value"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/animar_nollie_lipslide.py",
+      "description": "Calcula poses, trayectoria de tabla, giro de ruedas y cámara para el nollie BS lipslide.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Armature",
+        "BARANDA BAJA | BS-FS boardslide",
+        "Mug | Mug",
+        "SKATE | control general"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "9fabc5d0ff28b51590a0107cf764ae0dbb3c6ed470bd745ce180e67eea164541",
+      "functions": [
+        "smooth",
+        "mixvalue",
+        "aim",
+        "ik"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/armar_skate.py",
+      "description": "Ensambla madero, trucks y ruedas existentes bajo un control general; prepara lija, rodamientos y separadores.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib",
+        "shutil"
+      ],
+      "objects": [
+        "STYX | TABLA 8.25 x 31.875",
+        "TR144 v2 | Complete truck 8.002"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\AppData\\Local\\Temp\\codex-clipboard-55bb50d9-1512-46d8-b189-dab175961432.png",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\STYX_Skate_Armado.blend",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\texturas"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "e77f3a85462516ea78cf741b8efab0755c1afb203144ecfcd72312554f7bcc94",
+      "functions": [
+        "link",
+        "material",
+        "ring",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/audio_api.py",
+      "description": "Inspecciona las opciones enumeradas de formato de salida y audio en Blender.",
+      "imports": [
+        "bpy"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "f86c401cf5af5620b4774e37c10861b12604cd6fd369da2a8123992bfe92519c",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/cajon_inclinado_negro.py",
+      "description": "Construye o ajusta el cajón inclinado y su acabado negro.",
+      "imports": [
+        "bpy",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Cajon inclinado paralelo a bank"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "ece06146a464d000735c3e7ebd4bb1226a3788a62c18aca2107883ed91fde9f8",
+      "functions": [
+        "worn",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/colorear_mug_nieve.py",
+      "description": "Asigna acabados de color al mug y al muñeco de nieve.",
+      "imports": [
+        "bpy",
+        "mathutils"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "af8b2e5ad6ba36068b813dacefe7e8ec55b0b219811a018ef3ebe8bd73e82c6b",
+      "functions": [
+        "mat",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/complementar_fotos_satelite.py",
+      "description": "Añade ajustes y detalles de las fotografías a la planta del escenario.",
+      "imports": [
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "BARANDA BAJA | BS-FS boardslide",
+        "CAJON FS 50-50 | cuerpo",
+        "CAJON FS 50-50 | tapa",
+        "CAM 02 | Mural y quarters",
+        "CAM 03 | Cajones y barandas",
+        "CAM 04 | Planta",
+        "Caseta del parque"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "11eb91fee9c38bc23e24fda5978a0efdb44100c42e5e02f737e544587510f455",
+      "functions": [
+        "assign",
+        "box",
+        "photo",
+        "mesh",
+        "rod",
+        "camera"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/comprobar_fbx.py",
+      "description": "Utilidad de inspección, extracción o revisión: comprobar fbx. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "reinicia o elimina objetos de la escena"
+      ],
+      "sha256": "c3a77c3c41c023b720950ca23fe5a0a8a0a5fadf4389865b0ecb358873d06f52",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/conectar_tres_rampas.py",
+      "description": "Ajusta la unión de los módulos de rampa.",
+      "imports": [
+        "bmesh",
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Media piramide | skatepark - cancha",
+        "Quarter central bajo | mural",
+        "Quarter central bajo | mural | coping",
+        "Quarter derecho y lateral | esquina curva"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "183b370841dbc9d6e8494da6b8a22ba1bf06e3c7bed1d876b7567332d585ddb2",
+      "functions": [
+        "mix",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/configurar_eevee.py",
+      "description": "Configura EEVEE, 720p, 30 fps, 1800 fotogramas y salida de video con audio.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "cc470201c526a6726592162e165141a3fdba76b523340c94f54720acfe06390b",
+      "functions": [
+        "done"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/configurar_gpu.py",
+      "description": "Configura Cycles para la GTX 1650 mediante CUDA y guarda preferencias de usuario.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "guarda preferencias de Blender",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "6afec5b9cdcb29ae9921d405e7bcb69a0cd5b4a8caaa38596dedcb1a77a1d39e",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/consultar_render.py",
+      "description": "Utilidad de inspección, extracción o revisión: consultar render. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "b05e4de29745aacb6bc7497ebbb714a8d32ec39f7ecbf1ee01fdf6412c9419f2",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/convertir_referencias.py",
+      "description": "Convierte referencias HEIC y extrae imágenes de videos con FFmpeg.",
+      "imports": [
+        "PIL",
+        "imageio_ffmpeg",
+        "json",
+        "pathlib",
+        "pillow_heif",
+        "subprocess"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "659155a606b32e2fb85814cba10731f98f8b0711bf5599f1d296ae2543343f2f",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/corregir_planta_satelital.py",
+      "description": "Ajusta la distribución del parque a la referencia satelital.",
+      "imports": [
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "BARANDA BAJA | BS-FS boardslide",
+        "CAJON FS 50-50 | cuerpo"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "b6aa88c6242577273a16a31e9d9f876bfc2930db99b1cc9c35b267a2d74544e9",
+      "functions": [
+        "move_group",
+        "orient"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/corregir_trucks.py",
+      "description": "Corrige orientación de trucks y componentes asociados alrededor de un pivote local.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "SKATE | control general"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "8481d8d89d5274821875b5de059f7b84212d97caafbe130c5f428a8ac77759cf",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/crear_audio.py",
+      "description": "Sintetiza una base instrumental de 88 BPM y efectos de skate; produce pistas WAV sincronizadas.",
+      "imports": [
+        "json",
+        "numpy",
+        "pathlib",
+        "wave"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\audio"
+      ],
+      "effects": [],
+      "sha256": "392f212ae4de4fef03f495381c69debe258153d478ef032af18d091b11b432c8",
+      "functions": [
+        "time",
+        "band",
+        "noise",
+        "norm",
+        "edge",
+        "add",
+        "write",
+        "hz",
+        "wood",
+        "event"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/crear_cierre_avatar.py",
+      "description": "Genera poses del personaje, gesto del mug, vínculo a la mano y cámara de la secuencia.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils",
+        "pathlib",
+        "sys"
+      ],
+      "objects": [
+        "Armature",
+        "CAM RONDA | patinando por Japon",
+        "Mug | Mug",
+        "TABLA | montada con lija"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "borra animación de objetos seleccionados por el script",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "4c6fa188a7c9081679bc3a02b8de2ccbb6321529660636f0b7512c9e54862532",
+      "functions": [
+        "smooth",
+        "bones_key",
+        "aim",
+        "ik",
+        "pose",
+        "curves"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/crear_escenario.py",
+      "description": "Genera suelo, perfiles de rampas, obstáculos, cerramientos, contexto, luces y escenas de construcción; inicia una escena vacía.",
+      "imports": [
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib",
+        "random"
+      ],
+      "objects": [
+        "Quarter del fondo frontal",
+        "Quarter del fondo frontal | coping"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "reinicia o elimina objetos de la escena",
+        "ejecuta render"
+      ],
+      "sha256": "c0770a3edb80a561f60c74d3a0b70bcc0faa4489827c9ce174667f0333a70fa2",
+      "functions": [
+        "place",
+        "mat",
+        "photo_mat",
+        "mesh",
+        "box",
+        "rod",
+        "linked",
+        "profile_ramp",
+        "quarter",
+        "wire_quad",
+        "line",
+        "building",
+        "light",
+        "camera"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/crear_intro.py",
+      "description": "Inserta claves de posición y orientación para presentar el parque con una cámara animada.",
+      "imports": [
+        "bpy",
+        "bpy_extras",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "1629cb40e254d2f4b732fac630c8db2708ee608e0149d344df4c863577ea9901",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/crear_ronda_patinando.py",
+      "description": "Genera un recorrido de cámara ovalado con muestreo por longitud de arco para mantener velocidad.",
+      "imports": [
+        "bisect",
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "9c04d7b6fece527b43ecd7cfd86b635a8331f029445cea095665c8224695f982",
+      "functions": [
+        "pos",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/diagnostico_rampas.py",
+      "description": "Utilidad de inspección, extracción o revisión: diagnostico rampas. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "1f927952fdb6ad8658f6e39759fbfd173e12fbb5081e625e7aac45290aa7dbfd",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/eevee_api.py",
+      "description": "Inspecciona propiedades de muestreo y trazado disponibles en EEVEE.",
+      "imports": [
+        "bpy"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "faa87c46455cece96946b9f0d30978bfb78aeb1035235c7f50cd94ba65ee5771",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/exportar_fbx_completo.py",
+      "description": "Exporta el conjunto del escenario a formato FBX.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "3bec8be7d4026ab4558b91a2791887b6ab71618b43c5b1c3179550a94364d3c8",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/extraer_detalles_fotos.py",
+      "description": "Utilidad de inspección, extracción o revisión: extraer detalles fotos. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "PIL",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "eb81b02b0db70e13b2d9243630372960dd37542519ed18910ecea8b054bcdf41",
+      "functions": [
+        "patch"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/extraer_rampas.py",
+      "description": "Utilidad de inspección, extracción o revisión: extraer rampas. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "imageio_ffmpeg",
+        "pathlib",
+        "subprocess"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\Escenario\\El_Japon_EEVEE_720p_con_audio.mp4"
+      ],
+      "effects": [],
+      "sha256": "f222db14243cf1b96537c50125d2d54e41110a2522b8bd48bfd301503e9ed936",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/finalizar_audio.py",
+      "description": "Configura exportación MPEG4/H264 con audio AAC estéreo y registra las pistas integradas.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\audio"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "48a2b7a63bad0a39867ee7ae296085e0b22529b61a5678a9c808cd4dd05bcf9c",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/finalizar_planta_corregida.py",
+      "description": "Ajuste específico conservado del proceso: finalizar planta corregida. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Bank frontal | plataforma inclinada",
+        "CAJON FS 50-50 | cuerpo",
+        "CAM 01 | Vista general",
+        "CAM 04 | Planta",
+        "Mural fotografico | despliegue UV"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "dca9294595bb88f4941e8df23466bff3a7561af8aa6889ae452775983b8396e4",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/inspeccionar_cierre.py",
+      "description": "Utilidad de inspección, extracción o revisión: inspeccionar cierre. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Armature"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "guarda archivos .blend"
+      ],
+      "sha256": "59e4b61d310d62523dbbd1c28ce98bafded972cd67062ce80a4e227d19589441",
+      "functions": [
+        "ob"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/inspeccionar_truco.py",
+      "description": "Utilidad de inspección, extracción o revisión: inspeccionar truco. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "guarda archivos .blend"
+      ],
+      "sha256": "6b05c2dba25088fee01312bb691805101ec9dd25604ba66179ab0090665e0ab0",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/inspeccion_audio.py",
+      "description": "Utilidad de inspección, extracción o revisión: inspeccion audio. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "d4f86c04381198b731b3201bc771a986d8b2ffb5e3be7d5df6f0ef9e47ac796f",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/integrar_audio.py",
+      "description": "Integra pistas de sonido en el editor de secuencias de Blender.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\audio"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "f68ca6fadbdf5483b8f2b2928cb36ec8455d2d19e887662e0c37d1dd3f5564bc",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/intercambiar_extremos_abierto.py",
+      "description": "Ajuste específico conservado del proceso: intercambiar extremos abierto. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Caseta del parque"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "199dbb31f1d509f9e7761c99ce21f83c382ea6b8413678ed32feb4b5fd8a44e1",
+      "functions": [
+        "bounds",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/modelar_maletin_rojo.py",
+      "description": "Construye el obstáculo rojo a partir de un contorno con aberturas y rotura.",
+      "imports": [
+        "bmesh",
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib",
+        "shutil"
+      ],
+      "objects": [
+        "Barrera roja observada"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\AppData\\Local\\Temp\\codex-clipboard-78f9e171-cb56-42b3-bb80-324ca89e0c35.png"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "6e77022c9e1554100c255064417c6d447e4c40d5893e66cdfa17aa408652b1cb",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/mostrar_componentes.py",
+      "description": "Utilidad de inspección, extracción o revisión: mostrar componentes. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "mathutils"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "cc080fbefd4fec600e4a1076a58b5953a5966e6b41faa46f7c8424f13ad59e6f",
+      "functions": [
+        "reveal",
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/mural_y_media_piramide.py",
+      "description": "Ajusta el mural e incorpora la media pirámide.",
+      "imports": [
+        "bmesh",
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "Bank del mural | plano inclinado",
+        "Cancha contigua | asfalto"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "92de2e0c42326e23e9fcb4002fe754adc59f8b7f2700d7a0663ff66a8c171082",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/preparar_texturas.py",
+      "description": "Recorta y rectifica regiones de fotografías mediante transformaciones de Pillow para crear imágenes de textura.",
+      "imports": [
+        "PIL",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "db69c7b1c2cf5e37de1f5f4f8f598537bce7333466f9fa4496c4483aeea3dd74",
+      "functions": [
+        "patch"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/prueba_gpu.py",
+      "description": "Renderiza un fotograma de prueba con Cycles y registra tiempo y configuración.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib",
+        "time"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon\\prueba_GPU.json",
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon\\prueba_GPU_1080.png"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "12b2f1877e80b247ea96a25170a4f09493117790d00dd6ff98c9ddbc08fe63ce",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/reparar_cabeza.py",
+      "description": "Ajuste específico conservado del proceso: reparar cabeza. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "mathutils"
+      ],
+      "objects": [
+        "Muneco de nieve | Sphere",
+        "Muneco de nieve | Sphere.001"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "bd29d7ddfceadddc076054c77bb69deb814a6ad935d2f3cc0a49f4e26abb1e01",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/reparar_cabeza_persistente.py",
+      "description": "Ajuste específico conservado del proceso: reparar cabeza persistente. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "mathutils"
+      ],
+      "objects": [
+        "Muneco de nieve | Sphere",
+        "Muneco de nieve | Sphere.001"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "borra animación de objetos seleccionados por el script",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "b1294c940e2d05eb387dcabe5a72ba25d9284c6ff777e38036cad1642ef0a841",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/reparar_visibilidad_rampas.py",
+      "description": "Activa hide_render=False para las rampas identificadas y guarda el escenario.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "8b5befb3fecd7dc7f2a342552c59307c6520a684858a149f3d052e0626442cec",
+      "functions": [
+        "done"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/restaurar_ladrillo.py",
+      "description": "Restaura el material de ladrillo del escenario.",
+      "imports": [
+        "bpy",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [
+        "CAJON FS 50-50 | cuerpo"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\texturas\\cajon_ladrillo_foto.jpg"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "87592cfb75d9249b17ed80536fb76b4642812fb00bb7ad10890b575bac17d2af",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/revisar_cierre.py",
+      "description": "Utilidad de inspección, extracción o revisión: revisar cierre. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [
+        "CAM CIERRE | Juan taza y tabla"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "7e8eec50c097e8cffae4d9a84782e52be6ea1b277a04732d5a4c73399778b376",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/revisar_kickflip.py",
+      "description": "Utilidad de inspección, extracción o revisión: revisar kickflip. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [
+        "CAM FINAL | Kickflip y piso"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "55ab4349399d801c2aced8bb57f8082949e484852b3d071b96400edd97ee5011",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/revisar_nollie.py",
+      "description": "Utilidad de inspección, extracción o revisión: revisar nollie. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [
+        "CAM TRUCO | Nollie BS Lipslide"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "45658831005dbd105b7fcb7c2436c7e33df784cd789e49c491ea65122a7a7b4a",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/suavizar_intro.py",
+      "description": "Revisa y suaviza la trayectoria de la introducción.",
+      "imports": [
+        "bpy",
+        "bpy_extras",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "897b7c5b8f798aac75467d620995e9bbb88063dc519c2a885cb647b80ea44f38",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/texturizar_cajon_y_exportar.py",
+      "description": "Ajuste específico conservado del proceso: texturizar cajon y exportar. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils",
+        "pathlib",
+        "shutil"
+      ],
+      "objects": [
+        "CAJON FS 50-50 | cuerpo",
+        "CAJON FS 50-50 | tapa"
+      ],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon\\texturas",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\texturas"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "3db81773cf609fe8ec609afbd31120d651e2f5e5e8785b282b56fefcff9e7b4e",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/transicion_camaras.py",
+      "description": "Ajuste específico conservado del proceso: transicion camaras. Requiere el estado previo correspondiente del proyecto.",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "objects": [
+        "CAM INTRO | recorrido general 8s",
+        "CAM RONDA | patinando por Japon"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "ba895bf306c698d95d03526a56fc86c501885f0faf783cc28981589b5fd6dfa3",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/unificar_quarter_abierto.py",
+      "description": "Unifica la geometría del quarter abierto.",
+      "imports": [
+        "bmesh",
+        "bpy",
+        "json",
+        "math",
+        "mathutils",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "9edcf1413f6cb7411c08a67b3d05ec323ed255a26f6594116accfa7ad4a7b76d",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/verificar_audio.py",
+      "description": "Utilidad de inspección, extracción o revisión: verificar audio. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "3982e8f9906133e04d026615c0cd57edf6edef8809e007bca0c4b24970963977",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/verificar_rampas.py",
+      "description": "Utilidad de inspección, extracción o revisión: verificar rampas. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte\\Skatepark_El_Japon\\rampas_render_corregido.png"
+      ],
+      "effects": [
+        "ejecuta render"
+      ],
+      "sha256": "1789d12ebd3848c27e383ada4fa02b753f35a90c61797d78eebd6f5226d398aa",
+      "functions": []
+    },
+    {
+      "path": "Skatepark_El_Japon/scripts/verificar_y_exportar.py",
+      "description": "Utilidad de inspección, extracción o revisión: verificar y exportar. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "objects": [
+        "AREA | cielo difuso original",
+        "AREA | instancia vinculada",
+        "BARANDA BAJA | BS-FS boardslide",
+        "CAJON FS 50-50 | cuerpo",
+        "CAJON FS 50-50 | tapa",
+        "CAM 01 | Vista general",
+        "CAM 02 | Mural y quarters",
+        "LAB | Alt D - cambia ambas",
+        "LAB | Shift D - color independiente",
+        "LAB | area original",
+        "Ladrillo lateral | UV fotografico"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "69ca5bf48b362f59b704acc4f4b88f798ce3019286db7e4239b450da0a3bd8e9",
+      "functions": []
+    },
+    {
+      "path": "Avatar_Juan/construir_rostro.py",
+      "description": "Prueba inicial de construcción facial con las API internas de KeenTools FaceBuilder.",
+      "imports": [
+        "bl_ext",
+        "bpy",
+        "pathlib",
+        "traceback"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "reinicia o elimina objetos de la escena"
+      ],
+      "sha256": "908fcc8f9fd3543df68863ef21bf1d93774967b2e42ec0be898b22c6d4405568",
+      "functions": []
+    },
+    {
+      "path": "Avatar_Juan/crear_avatar.py",
+      "description": "Construye el avatar inicial sobre una cabeza FaceBuilder existente, con ropa, partes y vínculos.",
+      "imports": [
+        "bpy",
+        "bpy_extras",
+        "math",
+        "mathutils",
+        "pathlib",
+        "random"
+      ],
+      "objects": [
+        "FBHead",
+        "fbCamera"
+      ],
+      "paths": [],
+      "effects": [
+        "guarda archivos .blend",
+        "ejecuta render"
+      ],
+      "sha256": "576141d0848b8d34f57a57596d56564363ab78d3cbe830fc9df7c8c35e87d388",
+      "functions": [
+        "register",
+        "material",
+        "mesh",
+        "loft",
+        "sphere",
+        "tube",
+        "bone",
+        "studio_obj"
+      ]
+    },
+    {
+      "path": "Avatar_Juan/incorporar_avatar.py",
+      "description": "Integra el avatar inicial en el escenario; no representa el avatar final creado en Avaturn.",
+      "imports": [
+        "bpy",
+        "math",
+        "mathutils"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\Avatar\\Juan_Avatar_Inicial.blend",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\texturas\\Juan_referencia_frontal.jpg"
+      ],
+      "effects": [
+        "guarda archivos .blend",
+        "depende de un área de la interfaz; no asumir ejecución en background"
+      ],
+      "sha256": "cdbff249571f5c752e9e7ae4f680ad1f7e9b57d61d56b5355a689b0df3e65554",
+      "functions": [
+        "finish"
+      ]
+    },
+    {
+      "path": "Avatar_Juan/inspect_fb.py",
+      "description": "Utilidad de inspección, extracción o revisión: inspect fb. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bl_ext",
+        "bpy",
+        "traceback"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "1dbefa1fff7b91ef9b9e0875ef7268f78c1370bd6dc388801988176d487677e7",
+      "functions": []
+    },
+    {
+      "path": "Avatar_Juan/inspect_head.py",
+      "description": "Utilidad de inspección, extracción o revisión: inspect head. Consultar las operaciones detectadas antes de ejecutarla.",
+      "imports": [
+        "bpy",
+        "json",
+        "mathutils"
+      ],
+      "objects": [],
+      "paths": [],
+      "effects": [],
+      "sha256": "aba2c360dec163e2b9b13b4ac49c2326113fd836c00c31609da268ecf424fb82",
+      "functions": []
+    },
+    {
+      "path": "agregar_creditos.py",
+      "description": "Genera una tarjeta de título y concatena seis segundos iniciales con el MP4 y su audio.",
+      "imports": [
+        "PIL",
+        "imageio_ffmpeg",
+        "pathlib",
+        "subprocess"
+      ],
+      "objects": [],
+      "paths": [
+        "C:\\Users\\juan_\\OneDrive\\Documentos\\ChatGPT\\Segundo corte",
+        "C:\\Users\\juan_\\OneDrive\\Escritorio\\2do corte\\Escenario\\El_Japon_EEVEE_720p_con_audio.mp4",
+        "C:\\Windows\\Fonts\\arial.ttf"
+      ],
+      "effects": [],
+      "sha256": "d78724899a2c076ad0d13e101808db766ca1dbbd69534e1ea390e0e08cc0232f",
+      "functions": []
+    }
+  ],
+  "syntax_errors": []
+}
